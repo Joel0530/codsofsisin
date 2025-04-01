@@ -1,0 +1,13 @@
+
+edad = input("¿Cual es tu edad?")
+nacimiento = input("¿Cuando naciste?")
+nombre = input("¿Cual es tu nombre?")
+
+texto=[f"Nombre: {nombre}\n",f"Edad: {edad}\n",f"Nacimiento: {nacimiento}\n"]
+with open('alumnos.txt', 'a') as fichero:
+      fichero.writelines(texto)
+
+with open('alumnos.txt', 'r') as fichero:
+	for line in fichero.readlines():
+            print(line, end='')
+
